@@ -1,0 +1,31 @@
+<section class="form-section">
+  <div class="form-text">
+    <h3>Fique por dentro de tendências</h3>
+
+    <p>
+      Seja o primeiro a saber sobre as últimas tendências, notícias emocionantes
+      e atualizações empolgantes! Mantenha-se informado sobre tudo o que está
+      acontecendo no mundo da moda, tecnologia, cultura, e muito mais. Deixe-nos
+      ser seu guia através do fluxo constante de informações e descubra o que
+      está por vir. Inscreva-se na nossa newsletter para receber atualizações
+      diretamente na sua caixa de entrada. Esteja à frente do jogo e nunca perca
+      uma novidade. Basta preencher o formulário ao lado e junte-se à nossa
+      comunidade de pessoas informadas e entusiasmadas.
+    </p>
+  </div>
+
+  <form action="" [formGroup]="newsletterForm">
+    <label for="name">Nome</label>
+    <input type="text" id="name" formControlName="name" />
+
+    <label for="email">Email</label>
+    <input type="text" id="email" formControlName="email" />
+    <app-button-primary
+      btn-text="Se inscreva"
+      variant="secondary"
+      (submit)="submit()"
+      [disabled]="!newsletterForm.valid"
+      [loading]="loading()"
+    ></app-button-primary>
+  </form>
+</section>

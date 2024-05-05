@@ -1,0 +1,48 @@
+
+@import "../../../styles.scss";
+
+.btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    padding: 20px 20px;
+    transition: .3s;
+
+    &:disabled {
+        opacity: 0.6;
+    }
+
+    &.primary {
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        background: -webkit-linear-gradient(180deg, $primary-color, $secondary-color);
+    }
+
+    &.secondary {
+        font-size: 16px;
+        color: $primary-color;
+        background: white;
+    }
+}
+
+
+@media (min-width: 1080px) {
+
+    .btn {
+        cursor: pointer;
+        border: none;
+        border-radius: 30px;
+        padding: 20px 40px;
+        transition: .3s;
+
+        &.primary {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            background: -webkit-linear-gradient(180deg, $primary-color, $secondary-color);
+        }
+    }
+
+   
+}

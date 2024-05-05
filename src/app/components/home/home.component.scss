@@ -1,0 +1,128 @@
+
+@import "../../../styles.scss";
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 85px;
+}
+
+
+// HOME SECTION
+.home-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 60px;
+    gap: 50px;
+
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    
+    span {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 20px;
+        text-align: center;
+        width: 300px;
+        margin: 10px auto;
+        font-weight: 900;
+        color: $primary-color;
+    }
+
+    img {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+    }
+}
+
+// BENEFIT SECTION
+.benefit-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 60px;
+
+    .benefit-data{
+        border-bottom: 5px solid $secondary-color;
+        padding-bottom: 20px;
+
+        h2 {
+            font-family: "Roboto", sans-serif;
+            font-size: 60px;
+            font-weight: 600;
+            color: $primary-text;
+        }
+    }
+
+    gap: 70px;
+
+    p {
+        font-size: 30px;
+        font-style: italic;
+        font-weight: 300;
+        color: $primary-text;
+        
+
+        b {
+            background: -webkit-linear-gradient(180deg, $draft-color, $secondary-color);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-style: normal;
+        }
+    }
+
+   
+}
+
+// CTA SECTION
+.cta-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    app-button-primary:hover {
+        transition: .3s;
+        opacity: 0.9;
+    }
+}
+
+
+
+@media (min-width: 1080px) {
+    
+    .home-section {
+        grid-template-columns: 1fr 1fr;
+        text-align: start;
+
+        
+        h1 {
+            margin: 0;
+            text-align: start;
+            width: 100%;
+            font-size: 70px;
+            font-weight: 900;
+            color: $primary-color;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .benefit-section {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
